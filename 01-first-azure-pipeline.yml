@@ -7,7 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: lenovo-laptop
+  name: Default # Replace with your self-hosted agent pool name
+  demands:
+    - Agent.Name -equals lenovo-laptop
 
 steps:
 - script: echo Hello, world!
